@@ -6,17 +6,12 @@ import { Component } from '@angular/core'
     <div>
         <h1>Upcoming Angular 2 Events </h1>       
         <hr />
-        <div class="well hoverwell thumbnail">
-            <h2>{{event.name}}</h2>
-            <div>Date: {{event.date}}</div>
-            <div>Price: \${{event.price}}</div>
-            <div>Time: {{event.time}}</div>
-        </div>
+        <event-thumbnail [event]="event1"></event-thumbnail>
     </div>
     `
 })
 export class EventsListComponent {
-    event = {
+    event1 = {
         id: 1,
         name: 'Angular Connect',
         date: '9/13/2017',
